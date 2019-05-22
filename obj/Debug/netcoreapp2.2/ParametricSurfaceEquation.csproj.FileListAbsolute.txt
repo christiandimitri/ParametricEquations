@@ -1,0 +1,11 @@
+C:\Users\USER\Documents\GitHub\ParametricSurfaceEquation\bin\Debug\netcoreapp2.2\ParametricSurfaceEquation.deps.json
+C:\Users\USER\Documents\GitHub\ParametricSurfaceEquation\bin\Debug\netcoreapp2.2\ParametricSurfaceEquation.runtimeconfig.json
+C:\Users\USER\Documents\GitHub\ParametricSurfaceEquation\bin\Debug\netcoreapp2.2\ParametricSurfaceEquation.runtimeconfig.dev.json
+c:\Users\USER\Documents\GitHub\ParametricSurfaceEquation\bin\Debug\netcoreapp2.2\ParametricSurfaceEquation.dll
+c:\Users\USER\Documents\GitHub\ParametricSurfaceEquation\bin\Debug\netcoreapp2.2\ParametricSurfaceEquation.pdb
+c:\Users\USER\Documents\GitHub\ParametricSurfaceEquation\obj\Debug\netcoreapp2.2\ParametricSurfaceEquation.csprojAssemblyReference.cache
+c:\Users\USER\Documents\GitHub\ParametricSurfaceEquation\obj\Debug\netcoreapp2.2\ParametricSurfaceEquation.csproj.CoreCompileInputs.cache
+c:\Users\USER\Documents\GitHub\ParametricSurfaceEquation\obj\Debug\netcoreapp2.2\ParametricSurfaceEquation.AssemblyInfoInputs.cache
+c:\Users\USER\Documents\GitHub\ParametricSurfaceEquation\obj\Debug\netcoreapp2.2\ParametricSurfaceEquation.AssemblyInfo.cs
+c:\Users\USER\Documents\GitHub\ParametricSurfaceEquation\obj\Debug\netcoreapp2.2\ParametricSurfaceEquation.dll
+c:\Users\USER\Documents\GitHub\ParametricSurfaceEquation\obj\Debug\netcoreapp2.2\ParametricSurfaceEquation.pdb
