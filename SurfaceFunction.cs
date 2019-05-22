@@ -16,26 +16,76 @@ namespace ParametricSurfaceEquation
             PointsS = new List<Point>();
             PointsT = new List<Point>();
         }
-        public void GeneratePoints(int amount)
+
+        public void TorusClass(int amount)
         {
-            double constantS = Math.PI;
-            for (int t = 0; t < amount; t++)
+            for (int i = 0; i < amount; i++)
             {
-                double xt = 3 * Math.Cos(t) + Math.Cos(t) * Math.Cos(constantS);
-                double yt = 3 * Math.Sin(t) + Math.Sin(t) * Math.Cos(constantS);
-                double zt = Math.Sin(constantS);
-                Point pointT = new Point(xt, yt, zt);
-                PointsT.Add(pointT);
+                Point tPoint = ComputeTpoint(i);
+                PointsT.Add(tPoint);
             }
-            for (int s = 0; s < amount; s++)
+            foreach (Point ptT in PointsT)
             {
-                double xs = 3 * Math.Cos(constantS) + Math.Cos(constantS) * Math.Cos(s);
-                double ys = 3 * Math.Sin(constantS) + Math.Sin(constantS) * Math.Cos(s);
-                double zs = Math.Sin(s);
-                Point pointS = new Point(xs, ys, zs);
-                PointsS.Add(pointS);
+                for (int j = 0; j < amount; j++)
+                {
+                    Point sPoint = ComputeSpoint(j);
+                    PointsS.Add(sPoint);
+                }
             }
         }
+
+        public Point ComputeTpoint(double tVariable)
+        {
+            double t = tVariable;
+            double sConstant = Math.PI;
+            double computeXt = 3 * Math.Cos(t) + Math.Cos(t) * Math.Cos(sConstant);
+            double computeYt = 3 * Math.Sin(t) + Math.Sin(t) * Math.Cos(sConstant);
+            double computeZt = Math.Sin(sConstant);
+            Point pointT = new Point(computeXt, computeYt, computeZt);
+            return pointT;
+
+
+        }
+        // public void ComputeTpoints(int amount)
+        // {
+        //     double constantS = Math.PI;
+        //     for (int t = 0; t < amount; t++)
+        //     {
+        //         double xt = 3 * Math.Cos(t) + Math.Cos(t) * Math.Cos(constantS);
+        //         double yt = 3 * Math.Sin(t) + Math.Sin(t) * Math.Cos(constantS);
+        //         double zt = Math.Sin(constantS);
+        //         Point pointT = new Point(xt, yt, zt);
+        //         PointsT.Add(pointT);
+        //     }
+        // }
+
+
+        // public void ComputeSpoints(int amount)
+        // {
+        //     double constantT = Math.PI;
+        //     for (int s = 0; s < amount; s++)
+        //     {
+        //         double xs = 3 * Math.Cos(constantT) + Math.Cos(constantT) * Math.Cos(s);
+        //         double ys = 3 * Math.Sin(constantT) + Math.Sin(constantT) * Math.Cos(s);
+        //         double zs = Math.Sin(s);
+        //         Point pointS = new Point(xs, ys, zs);
+        //         PointsS.Add(pointS);
+        //     }
+        // }
+
+
+
+        public Point ComputeSpoint(double sVariable)
+        {
+            double s = sVariable;
+            double tConstant = Math.PI;
+            double computeXs = 3 * Math.Cos(tConstant) + Math.Cos(tConstant) * Math.Cos(s);
+            double computeYs = 3 * Math.Sin(tConstant) + Math.Sin(tConstant) * Math.Cos(s);
+            double computeZs = Math.Sin(s);
+            Point pointS = new Point(computeXs, computeYs, computeZs);
+            return pointS;
+        }
+
         public string TPointsToString()
         {
             string CSV = "";

@@ -10,7 +10,9 @@ namespace ParametricSurfaceEquation
             Console.WriteLine("Hello World!");
 
             SurfaceEquation srf = new SurfaceEquation();
-            srf.GeneratePoints(6);
+            srf.ComputeTpoint(0);
+            srf.ComputeSpoint(0);
+            srf.TorusClass(6);
             Console.WriteLine(srf.TPointsToString());
 
             File.WriteAllText("TPoints.csv", srf.TPointsToCSV());
