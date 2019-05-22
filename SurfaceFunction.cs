@@ -22,16 +22,11 @@ namespace ParametricSurfaceEquation
             for (int i = 0; i < amount; i++)
             {
                 Point tPoint = ComputeTpoint(i);
+                Point SPoint = ComputeSpoint(i);
                 PointsT.Add(tPoint);
+                PointsS.Add(SPoint);
             }
-            foreach (Point ptT in PointsT)
-            {
-                for (int j = 0; j < amount; j++)
-                {
-                    Point sPoint = ComputeSpoint(j);
-                    PointsS.Add(sPoint);
-                }
-            }
+
         }
 
         public Point ComputeTpoint(double tVariable)
