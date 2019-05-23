@@ -6,7 +6,7 @@ namespace ParametricEquations
 {
     class Program
     {
-        /// That is the main method of the program.
+        /// This is the main method of the app.
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
