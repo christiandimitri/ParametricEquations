@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using ParametricCurveEquation;
 
 namespace ParametricSurfaceEquation
 {
@@ -9,17 +10,19 @@ namespace ParametricSurfaceEquation
         {
             Console.WriteLine("Hello World!");
 
-            SurfaceEquation srf = new SurfaceEquation();
-            srf.ComputeTpoint(0);
-            srf.ComputeSpoint(0);
-            srf.TorusClass(6);
-            Console.WriteLine(srf.TPointsToString());
-
-            File.WriteAllText("TPoints.csv", srf.TPointsToCSV());
-            File.WriteAllText("SPoints.csv", srf.SPointsToCSV());
+            Torus srf = new Torus();
+            srf.ComputeTorus(10, 10);
+            File.WriteAllText("testPoint.csv", srf.TestPointsToCSV());
+            GenerateCurve();
 
         }
-
+        static void GenerateCurve()
+        {
+            Point pt = new Point(0, 0, 0);
+            ParametricCurve curve = new ParametricCurve(0, 0, 0);
+            curve.GeneratePoints(100);
+            File.WriteAllText("GeneratedPoints.csv", curve.GeneratedPointsToCSV());
+        }
 
     }
 }
