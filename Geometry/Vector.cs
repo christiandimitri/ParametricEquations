@@ -1,24 +1,32 @@
+
+
 using System;
-using System.Collections.Generic;
 
 namespace ParametricEquations
 {
-    public class Point
-
+    public class Vector
     {
         public double X;
         public double Y;
         public double Z;
 
-        public Point(double x, double y, double z)
+        public Vector(double x, double y, double z)
         {
             X = x;
             Y = y;
             Z = z;
         }
 
-        public static Point Origin => new Point(0, 0, 0);
+        public Vector(Vector vector)
+        {
+            X = vector.X;
+            Y = vector.Y;
+            Z = vector.Z;
+        }
 
+        public static Vector UnitX => new Vector(1, 0, 0);
+        public static Vector UnitY => new Vector(0, 1, 0);
+        public static Vector UnitZ => new Vector(0, 0, 1);
 
         public void Multiply(double number)
         {
@@ -26,6 +34,7 @@ namespace ParametricEquations
             Y *= number;
             Z *= number;
         }
+
         public void Divide(double number)
         {
             X /= number;
@@ -38,32 +47,25 @@ namespace ParametricEquations
             Y -= vector.Y;
             Z -= vector.Z;
         }
-        public void Substract(Point point)
-        {
-            X -= point.X;
-            Y -= point.Y;
-            Z -= point.Z;
-        }
         public void Add(Vector vector)
         {
             X += vector.X;
             Y += vector.Y;
             Z += vector.Z;
         }
-        public void Add(Point point)
+        public double Length => Math.Sqrt(X * X + Y * Y + Z * Z);
+        public void Unitize()
         {
-            X += point.X;
-            Y += point.Y;
-            Z += point.Z;
+            double length = Length;
+            X /= length;
+            Y /= length;
+            Z /= length;
+        }
+        public Vector Unit()
+        {
+            double length = Length;
+            return new Vector(X / length, Y / length, Z / length);
         }
 
-        public override string ToString()
-        {
-            return "Point" + "{" + X + "," + Y + "," + Z + "}";
-        }
-        public string PointToCSV()
-        {
-            return X + "," + Y + "," + Z;
-        }
     }
 }

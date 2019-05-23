@@ -5,13 +5,21 @@ namespace ParametricEquations
 {
     public class Torus
     {
-        public double Xt;
-        public double Yt;
-        public double Zt;
+
+        public double Radius1;
+        public double Radius2;
+
+        public Plane Plane;
+
+        public double Area => 4 * Math.PI * Math.PI * Radius1 * Radius2;
+        public double Volume => 2 * Math.PI * Math.PI * Radius1 * Radius2 * Radius2;
         List<Point> TestList;
 
-        public Torus()
+        public Torus(Plane plane, double radius1, double radius2)
         {
+            Plane = plane;
+            Radius1 = radius1;
+            Radius2 = radius2;
             TestList = new List<Point>();
         }
 
@@ -34,12 +42,24 @@ namespace ParametricEquations
         {
             t *= 2 * Math.PI;
             s *= 2 * Math.PI;
-            double computeX = 3 * Math.Cos(t) + Math.Cos(t) * Math.Cos(s);
-            double computeY = 3 * Math.Sin(t) + Math.Sin(t) * Math.Cos(s);
-            double computeZ = Math.Sin(s);
-            Point computedPoint = new Point(computeX, computeY, computeZ);
+            double computeX = (Radius1 + Radius2 * Math.Cos(t)) * Math.Cos(s);
+            double computeY = (Radius1 + Radius2 * Math.Cos(t)) * Math.Sin(s);
+            double computeZ = Radius2 * Math.Sin(t);
+
+
+            Vector vector1 = new Vector(Plane.Xaxis);
+            vector1.Multiply(computeX);
+            Vector vector2 = new Vector(Plane.Yaxis);
+            vector2.Multiply(computeY);
+            Vector vector3 = new Vector(Plane.Zaxis);
+            vector3.Multiply(computeZ);
+            vector1.Add(vector2);
+            vector1.Add(vector3);
+            Point computedPoint = new Point(Plane.Origin.X, Plane.Origin.Y, Plane.Origin.Z);
+            computedPoint.Add(vector1);
             return computedPoint;
         }
+
 
         public string TestPointsToCSV()
         {
@@ -53,4 +73,6 @@ namespace ParametricEquations
 
 
     }
+
+
 }
