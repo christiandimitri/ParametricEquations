@@ -13,7 +13,6 @@ namespace ParametricCurveEquation
 
         public ParametricCurve(double xt, double yt, double zt)
         {
-
             Xt = xt;
             Yt = yt;
             Zt = zt;
@@ -21,7 +20,6 @@ namespace ParametricCurveEquation
         }
         public void GeneratePoints(int amout)
         {
-
             Point originPoint = new Point(0, 0, 0);
             List<Point> points = new List<Point>();
             points.Add(originPoint);
@@ -38,7 +36,6 @@ namespace ParametricCurveEquation
         }
         public Point ComputedPoint(double xt, double yt, double zt)
         {
-
             double computedXt = (150 - 10 * Math.Sin(60 * xt * 0.01)) * Math.Cos(xt * 0.01);
             double computedYt = (150 - 10 * Math.Sin(60 * yt * 0.01)) * Math.Sin(yt * 0.01);
             double computedZt = 10 * Math.Cos(60 * zt * 0.01);
