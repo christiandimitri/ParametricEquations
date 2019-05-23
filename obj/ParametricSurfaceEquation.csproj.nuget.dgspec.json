@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\Documents\\GitHub\\ParametricSurfaceEquation\\ParametricSurfaceEquation.csproj": {}
+    "c:\\Users\\USER\\Documents\\GitHub\\ParametricEquations\\ParametricSurfaceEquation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\Documents\\GitHub\\ParametricSurfaceEquation\\ParametricSurfaceEquation.csproj": {
+    "c:\\Users\\USER\\Documents\\GitHub\\ParametricEquations\\ParametricSurfaceEquation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Documents\\GitHub\\ParametricSurfaceEquation\\ParametricSurfaceEquation.csproj",
+        "projectUniqueName": "c:\\Users\\USER\\Documents\\GitHub\\ParametricEquations\\ParametricSurfaceEquation.csproj",
         "projectName": "ParametricSurfaceEquation",
-        "projectPath": "C:\\Users\\USER\\Documents\\GitHub\\ParametricSurfaceEquation\\ParametricSurfaceEquation.csproj",
+        "projectPath": "c:\\Users\\USER\\Documents\\GitHub\\ParametricEquations\\ParametricSurfaceEquation.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Documents\\GitHub\\ParametricSurfaceEquation\\obj\\",
+        "outputPath": "c:\\Users\\USER\\Documents\\GitHub\\ParametricEquations\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

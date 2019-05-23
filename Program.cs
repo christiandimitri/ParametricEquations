@@ -2,7 +2,7 @@
 using System.IO;
 using ParametricCurveEquation;
 
-namespace ParametricSurfaceEquation
+namespace ParametricEquations
 {
     class Program
     {
