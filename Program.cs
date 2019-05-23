@@ -10,7 +10,7 @@ namespace ParametricEquations
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-
+            // Create the torus surface
             Torus srf = new Torus();
             srf.ComputeTorus(10, 10);
             File.WriteAllText("testPoint.csv", srf.TestPointsToCSV());
